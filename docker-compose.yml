@@ -1,0 +1,12 @@
+services:
+  big-barn-day:
+    image: ghcr.io/ashstancill/big-barn-day:latest
+    container_name: big-barn-day
+    restart: unless-stopped
+    user: "1000:1000"          # must own the data folder
+    ports:
+      - "8714:8000"
+    environment:
+      - TZ=Europe/London
+    volumes:
+      - ./data:/data

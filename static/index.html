@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Our Wedding Planner</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💍</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">💍 <span id="brand-name">Wedding Planner</span></div>
+    <nav id="nav">
+      <a data-view="overview" class="active">Overview</a>
+      <a data-view="budget">Budget</a>
+      <a data-view="calendar">Calendar</a>
+      <a data-view="checklist">Checklist</a>
+      <a data-view="guests">Guests</a>
+      <a data-view="seating">Seating</a>
+      <a data-view="food">Food</a>
+      <a data-view="settings">Settings</a>
+    </nav>
+  </header>
+
+  <main id="view"></main>
+
+  <dialog id="modal">
+    <form method="dialog" id="modal-form">
+      <h2 id="modal-title"></h2>
+      <div id="modal-fields"></div>
+      <div class="modal-actions">
+        <button type="button" class="btn danger" id="modal-delete" hidden>Delete</button>
+        <span class="spacer"></span>
+        <button type="button" class="btn" id="modal-cancel">Cancel</button>
+        <button type="submit" class="btn primary">Save</button>
+      </div>
+    </form>
+  </dialog>
+
+  <div id="toast"></div>
+  <script src="/static/app.js"></script>
+</body>
+</html>
